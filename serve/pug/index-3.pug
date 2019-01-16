@@ -1,0 +1,37 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    #head.center
+        .container
+            .row(style="height:100vh")
+                .col-md-12.text-center.vcenter
+                    h1.display-4.t-medium
+                        | Design and Build Effective Digital Experiences.
+    
+    #project.rand-center
+        .container
+            .row
+                - const item = {"1" : "Summer", "2" : "Awesome", "3":"Creative ", "4" : "Summer", "5":"Creative ", "6" : "Awesome"};
+                for n, i in item
+                    .col-md-4.item
+                        .img-flex
+                            figure
+                                img(src="image/girls/girl-"+ i +".jpg", alt="girl")
+                                figcaption
+                                    h3.title2.gra= n
+                                    h3.title3.display-6 Collection
+                                a(href="#")
+            .row.text-center.wrap
+                .col-md-12
+                    p Start a project
+                    h3.t-medium.sec-color hello@woo.com
+    
+
+    footer
+        .container
+            .row
+                .col-md-12
+                    p.   
+                        © 1999—2016 Violine
