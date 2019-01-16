@@ -1,0 +1,45 @@
+.container.blocks
+    .row
+        .col.s12.l6
+            .row
+                a.col.s12(href='#/work/project-showcase')
+                    .rectangle(style='background-image: url(./assets/images/work/vase-wooden.jpg)')
+                        .content
+                            h3.tlt Vase
+            .row
+                a.col.s12.margin-on-medium-and-down(href='#/work/gallery')
+                    .rectangle(style='background-image: url(./assets/images/work/bottle-gradient-2.jpg)')
+                        .content
+                            h3.tlt Bottle
+
+        a.col.s12.l6(href='#/work/right-fixed')
+            .rectangle-vertical(style='background-image: url(./assets/images/work/coo-coo-clock.png)')
+                .content
+                    h3.tlt Coo-coo
+
+    .row
+        a.col.s12.l6.margin-on-medium-and-down(href='#/work/left-fixed')
+            .rectangle-vertical(style='background-image: url(./assets/images/work/bottle-gradient.jpg)')
+                .content
+                    h3.tlt Bottle III
+
+        .col.s12.l6
+            .row
+                a.col.s12(href='#/work/fullscreen-sections')
+                    .rectangle(style='background-image: url(./assets/images/work/colorful-ice-cream.png)')
+                        .content
+                            h3.tlt Colorful ice cream
+            .row
+                a.col.s12(href='#/work/pagepiling')
+                    .rectangle(style='background-image: url(./assets/images/work/lamp-2.png)')
+                        .content
+                            h3.tlt Lamp II
+
+script.
+    $.getScript('./assets/js/textillate.js')
+        .done(function (script, status) {
+            //console.log('textillate script status: ', status);
+        })
+        .fail(function (error) {
+            //console.error('textillate script error: ', error);
+        });

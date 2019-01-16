@@ -1,0 +1,444 @@
+// -- Font -- //
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+
+
+@import 'components/materialize-colors';
+@import 'components/variables';
+
+/*---------------------------------------------------------------------------------------
+
+1 Typography improvements
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/typography';
+
+
+/*---------------------------------------------------------------------------------------
+
+2 Color improvements
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/color';
+
+
+/*---------------------------------------------------------------------------------------
+
+3 Separator improvements
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/separator';
+
+
+/*---------------------------------------------------------------------------------------
+
+4 Basic style
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/basic';
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Basic style
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/button';
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Header
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/header';
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Figure
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/figure';
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Footer
+
+-----------------------------------------------------------------------------------------*/
+@import 'components/footer';
+
+
+
+
+
+body{
+    // background-color: $black;
+    background-color: color('grey', 'darken-3');
+    font-family: 'Raleway', 'sans-serif';
+    .blus.blur{
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Header
+
+-----------------------------------------------------------------------------------------*/
+@import 'section/head';
+
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Header
+
+-----------------------------------------------------------------------------------------*/
+@import 'section/project';
+
+
+
+/*---------------------------------------------------------------------------------------
+
+5 Header
+
+-----------------------------------------------------------------------------------------*/
+@import 'section/work';
+
+
+
+
+
+
+
+#skill{
+    &.simple{
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .title{
+            height: 100%;
+        }
+    }
+}
+
+#testimonial{
+    &.simple{
+        background-image: url("../image/beauty-1.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: rgba($color: $black, $alpha: 0.8);
+        }
+        p{
+            font-style: italic;
+            &::before{
+                content:'"';
+                // font-size: 72px;
+            }
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+
+
+
+
+#work-item{
+    padding: {
+        top: 150px;
+    }
+    .head-work{
+        padding: {
+            top: 50px;
+            bottom: 100px;
+        }
+    }
+    .items-work{
+        .item{
+            padding-bottom: 50px;
+            h2{
+                color: $yellow;
+            }
+        }
+    }
+}
+
+#project-basic{
+    padding: {
+        top: 150px;
+    }
+    .image-article{
+        margin-top: 30px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .article{
+        padding: {
+            top: 50px;
+            bottom: 50px;
+        }
+        h1{
+            margin-bottom: 30px;
+        }
+        ul.desc-up{
+            padding: 0;
+            li{
+                display: inline-block;
+                margin: 0;
+                border-left: 1px solid $yellow;
+                color: $white;
+                padding: {
+                    right: 30px;
+                    top: 5px;
+                    bottom: 5px;
+                    left: 30px;
+                }
+                &:first-child{
+                    padding-left: 0px;
+                    border-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+#about-basic{
+    .title{
+        text-align: center;
+        min-height: auto;
+        background-image: url('../image/project1.jpg');
+        background-position: initial;
+        background-attachment: fixed;
+        background-size: 100%;
+        h1{
+            color: $white;
+            display: inline-block;
+            padding: 30px;
+            border : 30px double rgba($white, 0.6);
+            margin: {
+                top: 150px;
+                bottom: 150px;
+            }
+        }
+    }
+    .about-desc{
+        padding: {
+            top: 50px;
+            bottom: 50px;
+        }
+        .one{
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+        }
+        .mage{ 
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .about-me{
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+        }
+    }
+}
+
+#coba{
+    .wokkko{
+        background-color: red;
+        height: 100vh ;
+    }
+}
+
+#news-basic{
+    .article-news{
+        position: relative;
+        .title{
+            position: fixed;
+            height: 100%;
+            background-image: url('../image/SeparatorLogo.png');
+            background-position: left;
+            background-attachment: fixed;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .content-news{
+        padding-top: 200px;
+        .item{
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid rgba($white, 0.2);
+            p{
+                margin: {
+                    top: 30px;
+                    bottom: 20px;
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+#pricing{
+    .pricing-table{
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+            }
+        }
+    }
+}
+
+#single-basic{
+    padding-top: 200px;
+    .article-news{
+        .title{
+            width: 100%;
+            height: 100%;
+            img{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    }
+}
+
+#work-animated-background{
+    .area{
+        background: $black;  
+        width: 100%;
+        height:100vh;
+        .circles{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            li{
+                position: absolute;
+                display: block;
+                list-style: none;
+                width: 20px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.2);
+                animation: animate 25s linear infinite;
+                bottom: -150px;
+                &:nth-child(1){
+                    left: 25%;
+                    width: 80px;
+                    height: 80px;
+                    animation-delay: 0s;
+                }
+                &:nth-child(2){
+                    left: 10%;
+                    width: 20px;
+                    height: 20px;
+                    animation-delay: 2s;
+                    animation-duration: 12s;
+                }
+                &:nth-child(3){
+                    left: 70%;
+                    width: 20px;
+                    height: 20px;
+                    animation-delay: 4s;
+                }
+                &:nth-child(4){
+                    left: 40%;
+                    width: 60px;
+                    height: 60px;
+                    animation-delay: 0s;
+                    animation-duration: 18s;
+                }
+                &:nth-child(5){
+                    left: 85%;
+                    width: 20px;
+                    height: 20px;
+                    animation-delay: 0s;
+                }
+            }
+        }
+        .wave{
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+    .article{
+        position: relative;
+        background-color: $white;
+        color: $black;
+        p{
+            color: $black;
+        }
+        .work-item{
+            margin-bottom: 30px;
+            figure{
+                margin: 0;
+            }
+            .image-item{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .wave{
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            svg {
+                fill: $black;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

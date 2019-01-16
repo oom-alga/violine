@@ -1,0 +1,47 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+
+    #about-basic
+        .container-fluid.title
+            .row
+                .col-md-12
+                    .row.justify-content-md-center
+                        .col-md-10
+                            h1.t-medium About
+                                span.sec-color  
+                                    | Us
+        .container.about-desc
+            .row.one
+                .col-md-3
+                    h2.t-small About Me
+                .col-md-9
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio, itaque, enim alias quibusdam officiis qui quam dicta rem repellendus veniam nobis dolorum ut debitis ea, saepe eum! Placeat, cumque!
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita sed quam, ducimus officiis rem sunt, ut nihil nulla minima, amet hic magni dolorum laudantium cumque reiciendis molestias accusamus. Expedita, repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, architecto perspiciatis corrupti veritatis accusantium sunt provident facere ut, qui aut fugiat tempora quis reiciendis, quaerat optio et voluptatibus magnam voluptate.
+            .row.mage
+                .col-md-3
+                    h2.t-small Project Winer
+                    .separator-small
+                .col-md-9.owl-about.owl-carousel
+                    each val in["about1", "about2", "about3"]
+                        .item
+                            img(src="image/"+ val +".jpg", alt="")
+            .about-me
+                .row
+                    .col-md-3
+                        h2.t-small LOREM IPSUM DOLOR SIT AMET
+                        .separator-small
+                    .col-md-9
+                        h3 
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lacinia elit. Quisque euismod, dui vitae consequat pharetra.
+                        p 
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed lacinia elit. Quisque euismod, dui vitae consequat pharetra, nunc purus ultrices turpis, nec tristique enim ante sit amet ex. Nullam nec sem sit amet justo vestibulum dignissim id nec nisl. Quisque consectetur, justo id tincidunt iaculis, augue sapien sollicitudin ante, vel dignissim augue arcu at dui. Sed fermentum ac ipsum quis condim entum. Suspendisse vehicula at nisl sed mattis. Cras et sollicitudin lorem, a hendrerit.
+                
+    footer
+        .container
+            .row
+                .col-md-12
+                    p.   
+                        © 1999—2016 Violine

@@ -1,0 +1,7 @@
+footer {
+    padding: 3rem 0;
+
+    @media #{$medium-and-down} {
+        text-align: center;
+    }
+}

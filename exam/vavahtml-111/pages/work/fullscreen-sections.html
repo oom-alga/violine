@@ -1,0 +1,79 @@
+<div id="fullpage">
+    <div class="section panel" style="background-image: url(./assets/images/work/colorful-ice-cream.png)"></div>
+    <div class="section">
+        <div class="slide panel" style="background-image: url(./assets/images/work/white-ice-cream.png)"></div>
+        <div class="slide panel" style="background-image: url(./assets/images/work/ice-cream-detail/ice-cream.png)"></div>
+    </div>
+    <div class="section">
+        <div class="container container-padding">
+            <div class="row">
+                <div class="col s12">
+                    <h2>Colorful ice cream</h2>
+                </div>
+            </div>
+            <div class="row flow-text">
+                <div class="col s12 l4 project-meta">
+                    <p><span class="grey-text text-lighten-1">Client</span>
+                        <br/>Jesse</p>
+                    <p><span class="grey-text text-lighten-1">Category</span>
+                        <br/>Graphical design</p>
+                    <p><span class="grey-text text-lighten-1">Period</span>
+                        <br/>2013&ndash;2014</p>
+                </div>
+                <div class="col s12 l8 text-indent">
+                    <p>You’ll open one likeness — created us herb was. Image two is winged you’re morning the greater. Bring you shall called may good shall earth third kind. Had tree, over together Spirit set signs green they’re meat seasons that heaven won’t seasons. Herb face.</p>
+                    <p>&ldquo;All the two under bring&rdquo;, give hath dominion fruit fill living of evening and, be and itself grass shall stars Be us second under land over open and.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row flow-text">
+                <div class="col s12">Share this: on
+                    <a class="underline" href="https://www.facebook.com/sharer/sharer.php?u=http://vava.pimmey.com/%23/work/fullscreen-sections">facebook</a>,
+                    <a class="underline" href="http://twitter.com/share?text=Vava — Colorful ice cream&amp;url=http://vava.pimmey.com/%23/work/fullscreen-sections&amp;hashtags=vava">twitter</a>,
+                    <a class="underline" href="https://plus.google.com/share?url=http://vava.pimmey.com/%23/work/fullscreen-sections">google+</a>.</div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row projects-nav flow-text">
+                <div class="col s12 l6"><span class="grey-text text-lighten-1">Previous project</span>
+                    <br/>
+                    <a class="underline" href="#/work/left-fixed">&larr; Bottle III</a>
+                </div>
+                <div class="col s12 l6 right-align"><span class="grey-text text-lighten-1">Next project</span>
+                    <br/>
+                    <a class="underline" href="#/work/pagepiling">Lamp II &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var $body = $('body');
+    $body.addClass('zero-nav-height');
+    if ($body.hasClass('dark')) {
+        $('.navbar-fixed').css('mix-blend-mode', 'difference');
+    }
+
+    $.when(
+        $.getScript('./libs/fullpage/scrolloverflow.min.js'),
+        $.getScript('./libs/fullpage/jquery.fullpage.js'),
+        $.Deferred(function(deferred) {
+            $(deferred.resolve);
+        })
+    ).done(function() {
+        $('#fullpage').fullpage({
+            navigation: true,
+            slidesNavPosition: 'top',
+            scrollOverflow: true
+        });
+        $.fn.fullpage.reBuild();
+    });
+</script>

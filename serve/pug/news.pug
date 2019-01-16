@@ -1,0 +1,29 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    #news-basic
+        .container
+            .row.article-news
+                .col-md-6
+                    .title.vcenter
+                        .woo
+                            h1.t-medium
+                                | Posts
+                            .separator-big
+                            p Here you could know more about us, know What we are thinking & doing.
+                .col-md-6.content-news
+                    - var titles = ["HOW TO STAND OUT WHILE FITTING IN.", "TOP DESIGN TRENDS YOU SHOULD FOLLOW.", "WHY MINIMALISM IS THE FUTURE."];
+                    each title in titles
+                        .item
+                            h2.t-small= title
+                            .separator-small
+                            img(src="image/project1.jpg", alt="")
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quae. Tempora voluptatibus quos ea? Quibusdam expedita nobis quia. Cumque dolorum quae, accusamus temporibus voluptas quaerat quos nostrum error quo rerum!
+                            a(href="#")
+                                p.more READ MORE
+                                    span
+                    .footer                     
+                        p.   
+                            © 1999—2016 Violine

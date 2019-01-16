@@ -1,0 +1,222 @@
+.navbar-fixed {
+    z-index: 900;
+
+    nav {
+        @include transition(all 1s $ease-out-circ);
+        background-color: transparent;
+        box-shadow: none;
+
+        &.classic:hover {
+            background: transparentize($white, .05);
+        }
+
+        ul:not(.side-nav):not(.collapsible-accordion):not(.collapsible-body-list) {
+            a {
+                @include transition(border-bottom-color .5s $ease-out-circ);
+                display: inline;
+                padding: 0;
+                font-size: 1.75rem;
+                color: $black;
+                border-bottom: 1px solid transparentize($black, .75);
+
+                &:hover {
+                    background: transparent;
+                    border-bottom-color: $black;
+                }
+
+                &.dropdown-button {
+                    border-bottom-style: dotted;
+                }
+            }
+
+            li:not(:first-of-type) {
+                margin-left: 2rem;
+            }
+        }
+
+        .logo,
+        .sidenav-toggle {
+            font-size: 1.75rem;
+            color: $black;
+        }
+
+        .side-nav {
+            a {
+                font-size: 1.3rem;
+            }
+
+            .current-page::after,
+            .current-page::before {
+                margin-left: 5px;
+            }
+
+            .current-page::before {
+                margin-top: 21px;
+            }
+
+            .current-page::after {
+                margin-top: 17px;
+            }
+
+            .collapsible-header {
+                &::after {
+                    position: relative;
+                    top: .3rem;
+                    left: .25rem;
+                    font-family: 'linea-arrows-10';
+                    content: '\e019';
+                }
+
+                &.active::after {
+                    content: '\e083';
+                }
+            }
+        }
+    }
+}
+
+#sidenav-overlay {
+    z-index: 800;
+}
+
+.navbar-fixed nav,
+.navbar-fixed {
+    height: 150px;
+    line-height: 150px;
+
+    @media #{$medium-and-down} {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    @media #{$small-and-down} {
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+.zero-nav-height .navbar-fixed {
+    height: 0;
+}
+
+.nav-overlay {
+    @include transition(top .5s $ease-out-circ);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 800;
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    overflow-y: scroll;
+    background: transparentize(color('grey', 'lighten-5'), .3);
+    will-change: top;
+
+    @media #{$medium-and-down} {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    @media #{$small-and-down} {
+        padding-top: 80px;
+    }
+
+    .nav-overlay-content {
+        @include transition(opacity .75s $ease-out-circ .15s);
+        opacity: 0;
+
+        ul {
+            margin-top: 0;
+        }
+
+        li {
+            padding: .4rem 0;
+        }
+
+        h3 {
+            display: inline-block;
+            margin-bottom: 0;
+
+            a {
+                margin-bottom: 1.424rem;
+            }
+        }
+    }
+
+    &.visible {
+        top: 0;
+
+        .nav-overlay-content {
+            opacity: 1;
+        }
+    }
+
+    .current-page::after,
+    .current-page::before {
+        margin-left: -12px;
+    }
+
+    .current-page::before {
+        margin-top: 14px;
+    }
+
+    .current-page::after {
+        margin-top: 10px;
+    }
+
+    @media #{$medium-and-down} {
+        .current-page::before {
+            margin-top: 11px;
+        }
+
+        .current-page::after {
+            margin-top: 7px;
+        }
+    }
+
+    @media #{$medium-and-down} {
+        .current-page::before {
+            margin-top: 9px;
+        }
+
+        .current-page::after {
+            margin-top: 5px;
+        }
+    }
+}
+
+.current-page {
+    position: relative;
+
+    &::before {
+        margin-top: -1px;
+        border-top: 4px solid $black;
+    }
+
+    &::after {
+        margin-top: -5px;
+        border-bottom: 4px solid $black;
+    }
+
+    &.index-link::before {
+        border-top-color: transparentize($black, .5);
+    }
+
+    &.index-link::after {
+        border-bottom-color: transparentize($black, .5);
+    }
+}
+
+.current-page::after,
+.current-page::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -3px;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    content: '';
+}

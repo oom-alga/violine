@@ -1,0 +1,119 @@
+/*---------------------------------------------------------------------------------------
+
+Basic
+
+-----------------------------------------------------------------------------------------*/
+$white  : #ffffff;
+$orange : #E14E2F;
+$yellow : #ffd700;
+$black  : #101010;
+$dark   : #000000;
+
+p{
+    color: $white;
+}
+.sec-color{
+    color: $yellow;
+}
+
+h1{
+    color: rgba($white, 0.6);
+}
+
+/*-- selection --*/
+::-moz-selection { 
+    color: $yellow;
+    background: $black;
+}
+
+::selection {
+    color: $yellow;
+    background: $black;
+}
+
+
+/*-- Gradient Font --*/
+.gra{
+    text-transform: uppercase;
+    background: linear-gradient(to right, $yellow 0%, $orange 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*-- Vertical Center --*/
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+
+/*-- Image Responsive Styling --*/
+.img-flex{
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    img {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+
+.wave{
+    svg {
+        position: relative;
+        width: 100%;
+        bottom: -1px;
+        fill: $white;
+        path:nth-child(1) {
+            opacity: 0.15;
+        }
+        path:nth-child(2) {
+            opacity: 0.3;
+        }
+    }
+}
+
+/*-- blockquote Styling --*/
+blockquote{
+    padding: 30px 15px;
+    border-left: 5px solid $black;
+    border-right: 5px solid $black;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: rgba($color: $black, $alpha: 0.2)
+}
+
+
+/*-- Warp div Styling --*/
+.wrap{
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+}
+
+.button-white, .button-sec-color {
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-white{
+    background-color: rgba($color: $white, $alpha: 0.5);
+    color: $yellow;
+}
+.button-sec-color{
+    background-color: rgba($color: $yellow, $alpha: 0.5);
+    color: $white;
+}

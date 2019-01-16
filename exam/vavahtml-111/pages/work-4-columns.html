@@ -1,0 +1,81 @@
+<div class="container blocks four-col">
+    <div class="row">
+        <a class="col s12 l6 margin-on-medium-and-down" href="#/work/project-showcase">
+            <div class="rectangle-8-of-12" style="background-image: url(./assets/images/work/vase-wooden.jpg)">
+                <div class="content">
+                    <h3 class="tlt">Vase</h3>
+                </div>
+            </div>
+        </a>
+        <div class="col s12 l6 double-col">
+            <div class="row">
+                <a class="col s12" href="#/work/fullscreen-sections">
+                    <div class="rectangle" style="background-image: url(./assets/images/work/colorful-ice-cream.png)">
+                        <div class="content">
+                            <h3 class="tlt">Colorful ice cream</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="row">
+                <a class="col s12 l6 margin-on-medium-and-down" href="#/work/pagepiling">
+                    <div class="rectangle-vertical" style="background-image: url(./assets/images/work/lamp-2.png)">
+                        <div class="content medium-content">
+                            <h3 class="tlt">Lamp II</h3>
+                        </div>
+                    </div>
+                </a>
+                <div class="col s12 l6">
+                    <div class="row">
+                        <a class="col s12" href="#/work/left-fixed">
+                            <div class="rectangle" style="background-image: url(./assets/images/work/bottle-gradient.jpg)">
+                                <div class="content small-content">
+                                    <h3 class="tlt">Bottle III</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="col s12" href="#/work/gallery">
+                            <div class="rectangle" style="background-image: url(./assets/images/work/bottle-gradient-2.jpg)">
+                                <div class="content small-content">
+                                    <h3 class="tlt">Bottle</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $.getScript('./assets/js/textillate.js')
+        .done(function(script, status) {
+            //console.log('textillate script status: ', status);
+        })
+        .fail(function(error) {
+            //console.error('textillate script error: ', error);
+        });
+
+    function resizeRectangle() {
+        var $rectangle = $('.rectangle-8-of-12');
+        var $doubleCol = $('.double-col');
+
+        if (window.innerWidth > 992) {
+            $rectangle.css({
+                height: $doubleCol.height(),
+                paddingBottom: 0
+            });
+        } else {
+            $rectangle.css({
+                height: 0,
+                paddingBottom: 'calc(120% + 1.5rem)'
+            });
+        }
+    }
+
+    resizeRectangle();
+
+    $(window).on('resize', resizeRectangle);
+</script>

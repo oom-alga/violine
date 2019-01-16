@@ -1,0 +1,39 @@
+#project{
+    &.simple{
+        margin-top: 50px;
+        .title-top{
+            margin-bottom: 30px;
+        }
+    }
+    &.filter{
+        h1{
+            text-transform: uppercase;
+        }
+        .separator-horisontal{
+            margin: 30px auto;
+        }
+        #filter{
+            ul{
+                text-align: center;
+                li{
+                    list-style: none;
+                    display: inline;
+                    // font-size: 24px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+        .element{
+            figure{
+                &.img-flex{
+                    width: 100%;
+                    height: 450px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

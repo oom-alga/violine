@@ -1,0 +1,89 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    #head.simple-left
+        .items.owl-carousel.owl-index-2
+            - var values = ["beauty-1", "beauty-2"];
+            each val in values
+                .item.img-flex
+                    img(src="image/"+ val +".jpg", alt="", style="width:100%")
+        .wooshiap
+            .container
+                .row
+                    .col-md-8
+                        .title
+                            .woo
+                                h1.t-medium.sec-color
+                                    | Be Greater
+                                p 
+                                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad velit aspernatur suscipit consequuntur voluptas, similique provident voluptatem unde delectus quo cupiditate explicabo esse ex deserunt incidunt doloremque ut repellendus? lorem
+                                .input
+                                    button.button-white Learn More
+                                    button.button-sec-color Learn More
+    
+    #skill.simple.wrap
+        .container
+            .row
+                .col-md-6  
+                    img(src="image/beauty-3.jpg", alt="")
+                .col-md-6   
+                    .title.vcenter
+                        .woo
+                            h1.t-medium
+                                | Lorem Ipsum
+                            .separator-big
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis pariatur laboriosam molestiae voluptatibus laudantium magnam laborum, ab placeat facere voluptate quas recusandae deserunt ullam libero quia deleniti vel facilis impedit?
+                            .tags
+                                ul
+                                    li Facebook
+                                    li Twitter
+                                    li Instagram
+                                    li Cengkrama
+    #testimonial.simple.wrap
+        .container
+            .row.justify-content-md-center
+                .col-md-10
+                    .items.owl-carousel.owl-testimonial-1
+                        - var values = ["1", "2", "3", "4", "5", "6"];
+                        each val in values
+                            .item.text-center
+                                img(src="image/logos/client-"+ val +".png", alt="")
+
+    #project.filter.wrap
+        .container
+            .row
+                .col-md-12.text-center
+                
+                    .separator-horisontal
+                    h1.t-medium Ipsum Dolor 
+                        span.sec-color .
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    .separator-horisontal    
+                    #filter.wrap
+                        ul
+                            li 
+                                a.select.gra(data-filter="0") All
+                            li 
+                                a.gra(data-filter="1") Man
+                            li 
+                                a.gra(data-filter="2") Womman
+        .container
+            .row
+                - const item = {"girls/girl-1":"2", "mans/man-1":"1","girls/girl-2":"2",  "mans/man-2":"1","girls/girl-3":"2",  "mans/man-5":"1"};
+                for n, i in item
+                    .col-md-4.element(data-filter= n)
+                        figure.img-flex
+                            img(src= "image/"+ i +".jpg", alt="sample120")
+                            figcaption
+                                h3.gra Alga Kharisma .
+                                a(href="#")
+
+
+    footer
+        .container
+            .row
+                .col-md-12
+                    p.   
+                        © 1999—2016 Violine

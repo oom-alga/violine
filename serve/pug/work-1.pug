@@ -1,0 +1,27 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    #work-item
+        .container
+            .row.head-work
+                .col-md-12
+                   h1.t-big.gra FULL POST: 
+                   .separator-small
+                   p KNOW THE LATEST NEWS ON DESIGN AND DEVELOPMENT. CATCH UP WITH THE WORLD.
+            .row.items-work
+                - var titles = ["HOW TO STAND OUT WHILE FITTING IN.", "TOP DESIGN TRENDS YOU SHOULD FOLLOW.", "WHY MINIMALISM IS THE FUTURE."];
+                each title in titles
+                    .col-md-12.item
+                        h2= title
+                        p As others have said both are valid and will do the trick. I'm not 100% convinced that they are identical though. If you have some style cascading going on then they could in theory produce different results since they are effectively overriding different values. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam modi laudantium, autem, quasi eligendi possimus suscipit fuga quod unde molestias accusantium praesentium officia asperiores, ipsa itaque. Doloribus ipsum neque nihil magni labore. Voluptates at, temporibus quam eos iure ullam.
+                        a(href="#")
+                            p.more READ MORE
+                                span
+    footer
+        .container
+            .row
+                .col-md-12
+                    p.   
+                        © 1999—2016 Violine

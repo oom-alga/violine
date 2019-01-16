@@ -1,0 +1,72 @@
+.rectangle {
+    padding-bottom: 60%;
+}
+
+.rectangle-vertical {
+    padding-bottom: calc(120% + 1.5rem);
+}
+
+.square {
+    padding-bottom: 100%;
+}
+
+.rectangle,
+.rectangle-vertical,
+.square,
+.rectangle-8-of-12 {
+    @include filter(grayscale(100%));
+    @include transition(all .75s $ease-out-circ);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    > .content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 1.46rem;
+
+        &.medium-content {
+            padding: 0 .75rem;
+
+            h3 {
+                margin: .75rem 0;
+                font-size: 1.5rem;
+            }
+        }
+
+        &.small-content {
+            padding: 0 .5rem;
+
+            h3 {
+                margin: .5rem 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &:hover {
+        @include filter(grayscale(0));
+    }
+}
+
+.blocks {
+    .row {
+        margin-bottom: 1.5rem;
+    }
+
+    > .row .row:not(:first-of-type) {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: $black;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

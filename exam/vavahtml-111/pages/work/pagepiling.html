@@ -1,0 +1,68 @@
+<div id="pagepiling">
+    <div class="section panel" style="background-image: url(./assets/images/work/lamp-2.png)"></div>
+    <div class="section panel" style="background-image: url(./assets/images/work/lamp-detail/lamp-3.png)"></div>
+    <div class="section panel" style="background-image: url(./assets/images/work/lamp-detail/lamp-2.png)"></div>
+    <div class="section panel panel-background">
+        <div class="container flow-text center">
+            <div class="row">
+                <div class="col s12">
+                    <h2>Lamp II</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l4"><span class="grey-text text-lighten-1">Client&nbsp;</span>Lanterns Utd</div>
+                <div class="col s12 l4"><span class="grey-text text-lighten-1">Category&nbsp;</span>Graphical design</div>
+                <div class="col s12 l4"><span class="grey-text text-lighten-1">Period&nbsp;</span>2012&ndash;2015</div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="divider modest"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l8 offset-l2">
+                    <p>You’ll open one likeness — created us herb was. Image two is winged you’re morning the greater. Bring you shall called may good shall earth third kind. Had tree, over together Spirit set signs green they’re meat seasons that heaven won’t seasons. Herb face.</p>
+                    <p class="hide-on-small-and-down">&ldquo;All the two under bring&rdquo;, give hath dominion fruit fill living of evening and, be and itself grass shall stars Be us second under land over open and.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section panel panel-background">
+        <div class="container flow-text center">
+            <div class="row flow-text">
+                <div class="col s12">Share this: on
+                    <a class="underline" href="https://www.facebook.com/sharer/sharer.php?u=http://vava.pimmey.com/%23/work/pagepiling">facebook</a>,
+                    <a class="underline" href="http://twitter.com/share?text=Vava — Lamp II&amp;url=http://vava.pimmey.com/%23/work/pagepiling&amp;hashtags=vava">twitter</a>,
+                    <a class="underline" href="https://plus.google.com/share?url=http://vava.pimmey.com/%23/work/pagepiling">google+</a>.</div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row projects-nav flow-text">
+                <div class="col s12"><span class="grey-text text-lighten-1">Previous project</span>
+                    <br/>
+                    <a class="underline" href="#/work/fullscreen-sections">&larr; Colorful ice cream</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var $body = $('body');
+    $body.addClass('zero-nav-height');
+    if ($body.hasClass('dark')) {
+        $('.navbar-fixed').css('mix-blend-mode', 'difference');
+    }
+
+    $.getScript('./libs/pagepiling/jquery.pagepiling.js')
+        .done(function(script, status) {
+            $('#pagepiling').pagepiling();
+        })
+        .fail(function(error) {
+            //console.error(error);
+            Materialize.toast('Curves script error: ' + error.statusText, App.CONFIG.toastSpeed, 'error');
+        });
+</script>

@@ -1,0 +1,114 @@
+/*---------------------------------------------------------------------------------------
+
+Basic
+
+-----------------------------------------------------------------------------------------*/
+.t-big, 
+.t-small, 
+.t-medium{
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+/*---------------------------------------------------------------------------------------
+
+Family = Lato
+
+-----------------------------------------------------------------------------------------*/
+
+p,
+.overlay nav{
+    font-family: 'Lato', 'sans-serif';
+}
+.t-big, 
+.t-medium, 
+.t-small{
+    font-family: 'Raleway', 'sans-serif';
+}
+
+
+/*---------------------------------------------------------------------------------------
+
+Font = Weight
+
+-----------------------------------------------------------------------------------------*/
+.t-big,
+.t-medium,
+.t-small{
+    font-weight: 900;
+}
+figure figcaption .title1,
+#head.simple h1,
+#touch.simple h1{
+    font-weight: 700;
+}
+figure figcaption .title2,
+figure figcaption .title3{
+    font-weight: 300;
+}
+
+
+/*---------------------------------------------------------------------------------------
+
+Font = Size
+
+-----------------------------------------------------------------------------------------*/
+
+p.small{
+    // font-size: 18px;
+}
+.all-item{
+    // font-size: 27px;
+}
+
+
+
+
+p{
+    // line-height: 30px;
+}
+.t-big{
+    // font-size: 100px;
+}
+.t-medium{
+    // font-size: 80px;
+}
+.overlay{
+    nav{
+        // font-size: 2rem;
+    }
+}
+figure{
+    figcaption{
+        h3{
+            // font-size: 44px;
+            &.title3 {
+                // font-size: 25px;
+            }
+        }
+    }
+}
+
+#work{
+    .content{
+        svg{
+            // font-size: 72px;
+        }
+    }
+}
+
+
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.display-6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}

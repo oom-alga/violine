@@ -1,0 +1,17 @@
+<div class="hero">
+    <canvas id="waves"></canvas>
+    <h1>Error 404
+        <br>Page not found</h1>
+</div>
+<script>
+    var $body = $('body');
+    $body.addClass('zero-nav-height');
+
+    $.getScript('./assets/js/vava-waves.js')
+        .done(function(script, status) {
+            //console.log('get Home script status: ', status);
+        })
+        .fail(function(error) {
+            //console.error('Loading Home script error: ', error);
+        });
+</script>

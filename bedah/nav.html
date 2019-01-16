@@ -1,0 +1,261 @@
+
+<header>
+	<div class="pc-header">
+		<a class="site-title" href="#">Site Name</a>
+		
+		<i class="nav-cross material-icons">add</i>
+		<nav id="site-navigation" class="main-navigation" style="display: none;" role="navigation">
+			<ul>
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">about me</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Boutique</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="mobile-header">
+		<nav>
+			<ul>
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">about me</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Boutique</a></li>
+			</ul>
+		</nav>
+	</div>
+
+</header>
+
+<!-- You need this element to prevent the content of the page from jumping up -->
+<div class="header-limiter"></div>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Cookie');
+    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+    header {
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+	box-shadow:0 1px 1px #ccc;
+	height: 80px;
+	color: #000000;
+	box-sizing: border-box;
+	top:-100px;
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+header .pc-header {
+	padding: 20px 40px;
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.header-limiter {
+	height: 80px;
+	display: none;
+}
+
+header .pc-header .site-title {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	font-size: xx-large;
+	margin: 0;
+}
+
+header .pc-header a {
+	color: #000000;
+	text-decoration: none;
+}
+
+header .pc-header i {
+	line-height: 40px;
+	float: right;
+}
+
+header .pc-header ul {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 5px;
+	float: right;
+}
+
+
+header .pc-header ul li{
+	display: inline-block;
+	padding-right: 2em;
+	text-decoration:none;
+	color: #000000;
+	opacity: 0.9;
+}
+
+header .pc-header ul li:hover{
+	opacity: 1;
+}
+
+header .pc-header ul li.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+header .mobile-header {
+	display: none;
+}
+
+/* Fixed version of the header */
+
+body.fixed header {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-limiter {
+	display: block;
+}
+
+body.fixed header .pc-header a {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed header .pc-header ul {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+body.fixed header .pc-header i {
+	line-height: 28px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	header {
+		height: 75px;
+	}
+
+	header .pc-header a {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	header .pc-header ul {
+		line-height: 1;
+		float:none;
+	}
+
+	header .pc-header ul li {
+		font-size: 13px;
+	}
+
+	body.fixed header {
+		display: none;
+	}
+
+	header .mobile-header {
+		background-color: #ffffff;
+		box-shadow: 0 1px 1px #ccc;
+		margin: 20px 0;
+		padding: 20px 0;
+	}
+
+	header .mobile-header nav ul{
+		line-height: 20px;
+		font-size: 16px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: center;
+	}
+
+	header .mobile-header nav ul li {
+		display: block;
+	}
+
+	header .mobile-header nav ul li a{
+		color: #4e5359;
+		text-decoration: none;
+		display: block;
+		padding: 8px;
+	}
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+  height: 1500px;
+}
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    function rotate(a, b, c){
+    $({deg: b}).animate({deg: c}, {
+        step: function(now, fx){
+            $(a).css({
+                 transform: "rotate(" + now + "deg)"
+            });
+        }
+    });
+}
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+	$(document).ready(function(){
+		if($(window).width() > 600){
+			$(window).on('scroll', function(e){
+				if($(window).scrollTop() > 80) $('body').addClass('fixed');
+				else $('body').removeClass('fixed');
+			});
+		}
+
+	});
+
+	$(".nav-cross").click(function() {
+		if($(window).width() > 600) {
+			nav = $(".main-navigation");
+			if(!nav.hasClass("open")) {
+				nav.stop().fadeIn(500);
+				nav.addClass("open");
+				rotate(".nav-cross", 0, 135);
+			} else {
+				nav.stop().fadeOut(500);
+				nav.removeClass("open");
+				rotate(".nav-cross", 135, 0);
+			}
+		} else {
+			nav = $(".mobile-header");
+			if(!nav.hasClass("open")) {
+				nav.stop().fadeIn(500);
+				nav.addClass("open");
+				rotate(".nav-cross", 0, 135);
+			} else {
+				nav.stop().fadeOut(500);
+				nav.removeClass("open");
+				rotate(".nav-cross", 135, 0);
+			}
+		}
+
+	});
+</script>

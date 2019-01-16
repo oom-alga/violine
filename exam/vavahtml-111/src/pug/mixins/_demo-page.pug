@@ -1,0 +1,16 @@
+mixin demo-page(version, slug, hash, img)
+    - var indexName = slug.replace(/-/g, ' ').replace(/\b\w/g, function(l){ return l.toUpperCase() })
+    - var versionCapitalized = version.replace(/\b\w/g, function(l){ return l.toUpperCase() })
+
+    if (hash)
+        - var pageName = hash.replace('#/', '').replace(/-/g, ' ').replace(/\b\w/g, function(l){ return l.toUpperCase() })
+
+    .col.s12.m4.l3
+        if (hash)
+            a.demo-link(href='index-' + slug + '-menu-' + version + '.html' + hash)
+                img.responsive-img(src='./assets/images/demos/' + img + '-' + version + '.png', alt=pageName + ', ' + versionCapitalized)
+                .demo-title #{pageName}, #{versionCapitalized}
+        else
+            a.demo-link(href='index-' + slug +'-menu-' + version + '.html')
+                img.responsive-img(src='./assets/images/demos/index-' + slug + '-menu-' + version + '.png', alt=indexName)
+                .demo-title #{indexName}, #{versionCapitalized}

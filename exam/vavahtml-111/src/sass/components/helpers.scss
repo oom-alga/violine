@@ -1,0 +1,21 @@
+.locked {
+    overflow: hidden;
+}
+
+.margin-on-medium-and-down {
+    @media #{$medium-and-down} {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.mega-padding {
+    padding: 7rem 2rem;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.blurry {
+    @include filter(blur(20px));
+}

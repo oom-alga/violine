@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------------------
+
+Button
+
+-----------------------------------------------------------------------------------------*/
+
+/*-- More --*/
+.more{
+    position: relative;
+    display: inline;
+    transition: all 0.5s ease-in-out;
+    padding: {
+        left: 15px;
+        top: 3px;
+        right:15px;
+        bottom: 5px;
+    }
+    span{
+        z-index: -1;
+        background-color: yellow;
+        position: absolute;
+        width: 3px;
+        height: 30px;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    &:hover span{
+        width: 100%;
+    }
+    &:hover{
+        color: $black;
+    }
+}
+
+
+/*-- Tags --*/
+.tags{
+    padding: {
+        top: 50px;
+        bottom: 100px;
+    }
+    ul{
+        padding: 0;
+        li{
+            padding: 5px 15px;
+            display: inline-block;
+            border: 1px solid $yellow;
+            color: $white;
+        }
+    }
+}
+
+
+/*-- For All Item Button ( index ) --*/
+.all-item{
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
+    p{
+        display: inline;
+        &:hover ~ .sip{
+            width: 100px;
+        }
+    }
+    .sip{
+        margin-top: 5px;
+        height: 3px;
+        width: 0px;
+        background-color: $yellow;
+        transition: all 0.5s;
+    }
+    
+}

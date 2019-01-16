@@ -1,0 +1,29 @@
+{
+  "name": "vava",
+  "description": "Themeforest theme",
+  "authors": [
+    "Yegor Borisenco <pimmey@pimmey.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Themeforest",
+    "theme",
+    "Materialize"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=2.1.1 <3.0.0",
+    "materialize": "^0.97.7",
+    "fullpage.js": "^2.8.6",
+    "pagePiling.js": "pagepiling.js#^1.5.3"
+  },
+  "devDependencies": {}
+}

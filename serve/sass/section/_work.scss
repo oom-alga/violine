@@ -1,0 +1,35 @@
+#work{
+    &.simple{
+        .content{
+            margin-bottom: 30px;
+            position: relative;
+            h1{
+                border-left: 1px solid $yellow;
+                padding: 15px 30px;
+                .sec-color{
+                    display: inline;
+                }
+            }
+            svg{
+                margin-bottom: 15px;
+                margin-top: 50px;
+                color: $white;
+            }
+            h2{
+                color: red;
+                color: color('yellow', 'base');
+                margin: 20px 0 10px;
+            }
+        }
+        .bg-mage{
+            background-image: url("../image/SeparatorLogo.png");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+        }
+    }
+}

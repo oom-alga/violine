@@ -1,0 +1,72 @@
+.container
+    section
+        .row
+            .col.s12
+                h2 Message us
+        form#mail-form(action='mailer/mailer.php', novalidate, autocomplete='off')
+            .row
+                .col.s12.l6
+                    .input-field
+                        input#name(type='text', name='name')
+                        label(for='name') Name
+                .col.s12.l6
+                    .input-field
+                        input#email(type='email', name='email')
+                        label(for='email') Email
+            .row
+                .col.s12
+                    .input-field
+                        textarea#message.materialize-textarea(name='message')
+                        label(for='message') Message
+            .row
+                .col.s12
+                    button#send-message.btn.btn-large.btn-flat.waves-effect.waves-dark(type='submit') Send
+    section.visit-us
+        .row
+            .col.s12
+                h2 Pay us a visit
+        .row.flow-text
+            .col.s12.l4
+                p
+                    | +1-917-643-4346
+                    br
+                    a.underline(href='mailto:whazzup@vava.com') whazzup@vava.com
+            .col.s12.l4
+                address
+                    | B R James, 30 W 47th St
+                    br
+                    | New York, NY 10036
+                    br
+                a.underline(href='https://maps.google.com?daddr=B+R+James+30+W=47th+St+NY+10036', target='_blank') Get directions
+                | &nbsp;(opens in new tab)
+
+            .col.s12.l4
+                p
+                    | Opening hours
+                    br
+                    | 10:00&ndash;21:00
+
+    section.social
+        .row
+            .col.s12
+                h2 Let’s be friends
+        .row.flow-text.center
+            .col.s12.l4
+                a.network.facebook(href='#!') facebook
+            .col.s12.l4
+                a.network.twitter(href='#!') twitter
+            .col.s12.l4
+                a.network.vk(href='#!') vk
+            .col.s12.l4
+                a.network.dribbble(href='#!') dribbble
+            .col.s12.l4
+                a.network.googleplus(href='#!') google+
+            .col.s12.l4
+                a.network.github(href='#!') github
+
+.pace
+    .pace-activity
+
+script.
+    $('.pace').hide();
+    App.initContactForm();

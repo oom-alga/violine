@@ -1,0 +1,192 @@
+<div class="header">
+	<a href="#" class="hamburger-button">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<h1>sukaa</h1>	
+</div> 
+
+<div class="overlay">
+	<nav class="menu">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</div>
+
+<p class="blur">
+	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quaerat atque? Asperiores, maxime! Rem voluptates, soluta iusto et laudantium, hic ipsa sunt ea quae qui ab consectetur blanditiis impedit labore?
+</p>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.blur{
+		filter: blur(8px);
+  		-webkit-filter: blur(8px);
+	}
+	/* Hamburger button styles. */
+.header{
+	background-color: red;
+	position: relative;
+	padding: 30px;
+}
+.header h1{
+	right: 0;
+	position: absolute;
+	z-index: 100;
+}
+.hamburger-button {
+	position: absolute;
+	transition: .3s ease-in-out;
+	width: 45px;
+	height: 34px;
+	z-index: 99;
+}
+
+	.hamburger-button span {
+		position: absolute;
+		height: 8px;
+		border-radius: 4px;
+		width: 100%;
+		background-color: #3D4146;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+	}
+
+		.hamburger-button span:nth-child(1) {
+			top: 0px;
+		}
+
+		.hamburger-button span:nth-child(2),
+		.hamburger-button span:nth-child(3) {
+			top: 13px;
+		}
+
+		.hamburger-button span:nth-child(4) {
+			top: 26px;
+		}
+
+	.hamburger-button.active span {
+		background-color: #FFF;
+	}
+
+		.hamburger-button.active span:nth-child(1),
+		.hamburger-button.active span:nth-child(4) {
+			opacity: 0;
+		}
+
+		.hamburger-button.active span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		.hamburger-button.active span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+
+/* 1. Style the overlay & navigation. */
+.overlay {
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s, height .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav {
+	font-size: 2rem;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+	nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+		nav ul li {
+			opacity: 0;
+			margin: 1rem 0;
+		}
+
+			nav ul li a {
+				color: #000;
+				text-decoration: none;
+				transition: opacity .2s ease;
+				opacity: .75;
+			}
+
+				nav ul li a:hover {
+					opacity: 1;
+				}
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* 3. Style the visible overlay. */
+.overlay.visible {
+	opacity: .85;
+	visibility: visible;
+	height: 100%;
+}
+
+	.overlay.visible li {
+		animation: fadeInLeft .3s ease forwards;
+	}
+
+		.overlay.visible li:nth-of-type(1) {
+			animation-delay: 0.23s;
+		}
+
+		.overlay.visible li:nth-of-type(2) {
+			animation-delay: 0.26s;
+		}
+
+		.overlay.visible li:nth-of-type(3) {
+			animation-delay: 0.29s;
+		}
+
+		.overlay.visible li:nth-of-type(4) {
+			animation-delay: 0.32s;
+		}
+
+		.overlay.visible li:nth-of-type(5) {
+			animation-delay: 0.35s;
+		}
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$('.hamburger-button').on('click', function(event){
+		event.preventDefault();
+		
+		$(this).toggleClass('active');
+		$('.overlay').toggleClass('visible');
+	});
+});
+</script>

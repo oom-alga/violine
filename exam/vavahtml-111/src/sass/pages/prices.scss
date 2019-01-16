@@ -1,0 +1,53 @@
+.prices {
+    .info {
+        display: inline-block;
+        padding: 0 1rem;
+        cursor: help;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .price {
+        font-size: 3.5rem;
+        font-weight: 300;
+    }
+
+    .price-box {
+        @media #{$medium-and-down} {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .divider {
+        margin-top: .5em;
+    }
+
+    @media #{$medium-and-down} {
+        text-align: center;
+
+        .info {
+            position: absolute;
+        }
+    }
+}
+
+.faq {
+    .collapsible {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .collapsible-header {
+        min-height: 5rem;
+        padding: 0;
+        line-height: 5rem;
+        background: transparent;
+    }
+
+    .collapsible-body p {
+        padding: 2rem 0;
+    }
+}

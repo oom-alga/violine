@@ -1,0 +1,43 @@
+#head{
+    &.simple-bg{
+        padding: {
+            top: 220px;
+            bottom: 220px;
+        } 
+        background-image: url(../image/background.png);
+        background-position: center;
+        background-size: cover;
+        h1{
+            color: $white;
+        }
+        @media #{$small-and-down} {
+            background-color: color('red','accent-4');
+            h1{
+                color: green;
+            }
+        }
+    }
+    &.simple-left{
+        position: relative;
+        .item{
+            height: 100vh;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .wooshiap{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 9;
+            top: 0;
+            background-color: rgba($color: $black, $alpha: 0.5);
+            .title{
+                padding-top: 30%;
+                padding-bottom: 30%;
+            }
+        }
+    }
+}
