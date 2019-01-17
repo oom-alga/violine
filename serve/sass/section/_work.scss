@@ -4,7 +4,7 @@
             margin-bottom: 30px;
             position: relative;
             h1{
-                border-left: 1px solid $yellow;
+                border-left: 1px solid color('yellow', 'base');
                 padding: 15px 30px;
                 .sec-color{
                     display: inline;
@@ -13,7 +13,7 @@
             svg{
                 margin-bottom: 15px;
                 margin-top: 50px;
-                color: $white;
+                color: color('basic', 'white');
             }
             h2{
                 color: red;
@@ -29,6 +29,25 @@
             padding: {
                 top: 50px;
                 bottom: 50px;
+            }
+        }
+    }
+    &.item-contents{
+        padding: {
+            top: 150px;
+        }
+        .head-work{
+            padding: {
+                top: 50px;
+                bottom: 100px;
+            }
+        }
+        .items-work{
+            .item{
+                padding-bottom: 50px;
+                h2{
+                    color: color('yellow', 'base');
+                }
             }
         }
     }

@@ -3,39 +3,35 @@
 Basic
 
 -----------------------------------------------------------------------------------------*/
-$white  : #ffffff;
-$orange : #E14E2F;
-$yellow : #ffd700;
-$black  : #101010;
-$dark   : #000000;
+
 
 p{
-    color: $white;
+    color: color('basic', 'white');
 }
 .sec-color{
-    color: $yellow;
+    color: color('yellow', 'base');
 }
 
 h1{
-    color: rgba($white, 0.6);
+    color: color('basic', 'white');
 }
 
 /*-- selection --*/
 ::-moz-selection { 
-    color: $yellow;
-    background: $black;
+    color: color('yellow', 'base');
+    background: color('grey', 'darken-3');
 }
 
 ::selection {
-    color: $yellow;
-    background: $black;
+    color: color('yellow', 'base');
+    background: color('grey', 'darken-3');
 }
 
 
 /*-- Gradient Font --*/
 .gra{
     text-transform: uppercase;
-    background: linear-gradient(to right, $yellow 0%, $orange 100%);
+    background: linear-gradient(to right, color('yellow', 'base') 0%, color('orange', 'darken-4') 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -68,7 +64,7 @@ h1{
         position: relative;
         width: 100%;
         bottom: -1px;
-        fill: $white;
+        fill: color('basic', 'white');
         path:nth-child(1) {
             opacity: 0.15;
         }
@@ -81,11 +77,11 @@ h1{
 /*-- blockquote Styling --*/
 blockquote{
     padding: 30px 15px;
-    border-left: 5px solid $black;
-    border-right: 5px solid $black;
+    border-left: 5px solid color('grey', 'darken-3');
+    border-right: 5px solid color('grey', 'darken-3');
     border-radius: 10px;
     display: inline-block;
-    background-color: rgba($color: $black, $alpha: 0.2)
+    background-color: rgba($color: color('grey', 'darken-3'), $alpha: 0.2)
 }
 
 
@@ -122,10 +118,10 @@ blockquote{
 }
 
 .button-white{
-    background-color: rgba($color: $white, $alpha: 0.5);
-    color: $yellow;
+    background-color: rgba($color: color('basic', 'white'), $alpha: 0.5);
+    color: color('yellow', 'base');
 }
 .button-sec-color{
-    background-color: rgba($color: $yellow, $alpha: 0.5);
-    color: $white;
+    background-color: rgba($color: color('yellow', 'base'), $alpha: 0.5);
+    color: color('basic', 'white');
 }

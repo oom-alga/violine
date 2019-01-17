@@ -8,7 +8,7 @@
         background-position: center;
         background-size: cover;
         h1{
-            color: $white;
+            color: color('basic', 'white');
         }
     }
     &.simple-left{
@@ -27,13 +27,10 @@
             position: absolute;
             z-index: 9;
             top: 0;
-            background-color: rgba($color: $black, $alpha: 0.5);
+            background-color: rgba($color: color('grey', 'darken-3'), $alpha: 0.5);
             .me{
                 height: 100vh;
             }
         }
-    }
-    &.center{
-        
     }
 }

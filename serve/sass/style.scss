@@ -17,14 +17,6 @@
 
 /*---------------------------------------------------------------------------------------
 
-2 Color improvements
-
------------------------------------------------------------------------------------------*/
-@import 'components/color';
-
-
-/*---------------------------------------------------------------------------------------
-
 3 Separator improvements
 
 -----------------------------------------------------------------------------------------*/
@@ -72,10 +64,7 @@
 
 
 
-
-
 body{
-    // background-color: $black;
     background-color: color('grey', 'darken-3');
     font-family: 'Raleway', 'sans-serif';
     .blus.blur{
@@ -114,156 +103,33 @@ body{
 
 
 
+/*---------------------------------------------------------------------------------------
+
+5 Skill
+
+-----------------------------------------------------------------------------------------*/
+@import 'section/skill';
 
 
 
+/*---------------------------------------------------------------------------------------
 
-#skill{
-    &.simple{
-        img{
-            width: 100%;
-            height: auto;
-        }
-        .title{
-            height: 100%;
-        }
-    }
-}
+5 Skill
 
-#testimonial{
-    &.simple{
-        background-image: url("../image/beauty-1.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        &::after{
-            content: "";
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            background-color: rgba($color: $black, $alpha: 0.8);
-        }
-        p{
-            font-style: italic;
-            &::before{
-                content:'"';
-                // font-size: 72px;
-            }
-        }
-        img{
-            width: auto;
-            height: auto;
-        }
-    }
-}
+-----------------------------------------------------------------------------------------*/
+@import 'section/testimonial';
 
-#work-item{
-    padding: {
-        top: 150px;
-    }
-    .head-work{
-        padding: {
-            top: 50px;
-            bottom: 100px;
-        }
-    }
-    .items-work{
-        .item{
-            padding-bottom: 50px;
-            h2{
-                color: $yellow;
-            }
-        }
-    }
-}
 
-#project{
-    &.basic{
-        padding: {
-            top: 150px;
-        }
-        h2, h3{
-            color: $white;
-        }
-        .image-article{
-            margin-top: 30px;
-            img{
-                width: 100%;
-                height: auto;
-            }
-        }
-        .article{
-            padding: {
-                top: 50px;
-                bottom: 50px;
-            }
-            h1{
-                margin-bottom: 30px;
-            }
-            ul.desc-up{
-                padding: 0;
-                li{
-                    display: inline-block;
-                    margin: 0;
-                    border-left: 1px solid $yellow;
-                    color: $white;
-                    padding: {
-                        right: 30px;
-                        top: 5px;
-                        bottom: 5px;
-                        left: 30px;
-                    }
-                    &:first-child{
-                        padding-left: 0px;
-                        border-left: 0px;
-                    }
-                }
-            }
-        }
-    }
-}
 
-#about{
-    &.basic{
-        .title{
-            text-align: center;
-            min-height: auto;
-            background-image: url('../image/project1.jpg');
-            background-position: initial;
-            background-attachment: fixed;
-            object-fit: cover;
-            background-size: cover;
-            h1{
-                color: $white;
-                display: inline-block;
-                padding: 30px;
-                border : 30px double rgba($white, 0.6);
-                margin: {
-                    top: 150px;
-                    bottom: 150px;
-                }
-            }
-        }
-        .about-desc{
-            padding: {
-                top: 50px;
-                bottom: 50px;
-            }
-            h2, h3{
-                color: $white;
-            }
-            .mage{ 
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-    }
-}
+/*---------------------------------------------------------------------------------------
+
+5 Skill
+
+-----------------------------------------------------------------------------------------*/
+@import 'section/about';
+
+
+
 
 #coba{
     .wokkko{
@@ -294,9 +160,9 @@ body{
         .item{
             padding-bottom: 50px;
             margin-bottom: 50px;
-            border-bottom: 1px solid rgba($white, 0.2);
+            border-bottom: 1px solid rgba(color('basic', 'white'), 0.2);
             h2{
-                color: $white;
+                color: color('basic', 'white');
             }
             p{
                 margin: {
@@ -344,7 +210,7 @@ body{
 
 #work-animated-background{
     .area{
-        background: $black;  
+        background: color('grey', 'darken-3');  
         width: 100%;
         height:100vh;
         .circles{
@@ -405,10 +271,10 @@ body{
     }
     .article{
         position: relative;
-        background-color: $white;
-        color: $black;
+        background-color: color('basic', 'white');
+        color: color('grey', 'darken-3');
         p{
-            color: $black;
+            color: color('grey', 'darken-3');
         }
         .work-item{
             margin-bottom: 30px;
@@ -426,7 +292,7 @@ body{
             position: absolute;
             width: 100%;
             svg {
-                fill: $black;
+                fill: color('grey', 'darken-3');
             }
         }
     }

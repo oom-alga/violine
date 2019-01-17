@@ -8,13 +8,12 @@ Header
     padding: 50px 0;
     height: 200px;
     transition: all 1s;
-    
     width: 100%;
     &.fixed .hamburger-button{
         position: fixed;
         transition: .3s ease-in-out;
         z-index: 99;
-        background-color: $black;
+        background-color: color('grey', 'darken-3');
     }
     h1{
         top: 20px;
@@ -38,7 +37,7 @@ Header
             height: 3px;
             border-radius: 4px;
             width: 45px;
-            background-color: $white;
+            background-color: color('basic', 'white');
             top: 0;
             transition: transform .2s ease-in-out, opacity .2s ease-in-out;
             &:nth-child(1) {
@@ -54,7 +53,7 @@ Header
         }
         &.active{
             span {
-                background-color: $white;
+                background-color: color('basic', 'white');
                 &:nth-child(1),
                 &:nth-child(4) {
                     opacity: 0;
@@ -109,7 +108,7 @@ Header
                 opacity: 0;
                 margin: 1rem 0;
                 a {
-                    color: $white;
+                    color: color('basic', 'white');
                     text-decoration: none;
                     transition: opacity .2s ease;
                     opacity: .75;

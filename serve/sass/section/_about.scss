@@ -1,0 +1,41 @@
+#about{
+    &.basic{
+        .title{
+            text-align: center;
+            min-height: auto;
+            background-image: url('../image/project1.jpg');
+            background-position: initial;
+            background-attachment: fixed;
+            object-fit: cover;
+            background-size: cover;
+            h1{
+                color: color('basic', 'white');
+                display: inline-block;
+                padding: 30px;
+                border : 30px double rgba(color('basic', 'white'), 0.6);
+                margin: {
+                    top: 150px;
+                    bottom: 150px;
+                }
+            }
+        }
+        .about-desc{
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+            h2{
+                color: color('yellow','base');
+            }
+            h3{
+                color: color('basic', 'white');
+            }
+            .mage{ 
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

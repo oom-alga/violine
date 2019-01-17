@@ -1,4 +1,10 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$basic: (
+  "white" :  #ffffff,
+  "black" :  #000000,
+);
+
 $materialize-red: (
   "lighten-5":  #fdeaeb,
   "lighten-4":  #f8c1c3,
@@ -11,7 +17,6 @@ $materialize-red: (
   "darken-3":   #a21318,
   "darken-4":   #8b1014,
 );
-
 $red: (
   "lighten-5":  #ffebee,
   "lighten-4":  #ffcdd2,
@@ -323,6 +328,7 @@ $grey: (
   "darken-4":   #030303
 );
 
+
 $shades: (
   "black":        #000,
   "white":        #fff,
@@ -350,7 +356,8 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
+  "basic": $basic
 );
 
 // usage: color("name_of_color", "type_of_color")

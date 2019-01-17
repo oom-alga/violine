@@ -1,0 +1,28 @@
+#testimonial{
+    &.simple{
+        background-image: url("../image/beauty-1.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: rgba($color: color('grey', 'darken-3'), $alpha: 0.8);
+        }
+        p{
+            font-style: italic;
+            &::before{
+                content:'"';
+            }
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+}

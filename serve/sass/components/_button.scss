@@ -28,7 +28,7 @@ Button
         width: 100%;
     }
     &:hover{
-        color: $black;
+        color: color('grey', 'darken-3');
     }
 }
 
@@ -44,8 +44,8 @@ Button
         li{
             padding: 5px 15px;
             display: inline-block;
-            border: 1px solid $yellow;
-            color: $white;
+            border: 1px solid color('yellow', 'base');
+            color: color('basic', 'white');
             margin-bottom: 5px;
         }
     }
@@ -68,7 +68,7 @@ Button
         margin-top: 5px;
         height: 3px;
         width: 0px;
-        background-color: $yellow;
+        background-color: color('yellow', 'base');
         transition: all 0.5s;
     }
     

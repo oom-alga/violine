@@ -17,9 +17,6 @@ $small-and-down: "only screen and (max-width : #{$small-screen})";
 // Global
 $container-width: 80%;
 
-// Custom colors
-$white: #fff;
-$black: #373737;
 
 // Toast background colors
 $error: color('red', 'accent-2');
@@ -38,4 +35,4 @@ $pinterest: #bd081c;
 // Hamburger icon
 $icon-line-width: 24px;
 $icon-line-height: 2px;
-$icon-line-color: $black;
+$icon-line-color: color('grey', 'darken-3');

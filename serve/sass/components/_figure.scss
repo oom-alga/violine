@@ -9,10 +9,10 @@ figure{
     overflow: hidden;
     margin: 10px;
     width: 100%;
-    background-color: $dark;
-    color: $white;
+    background-color: color('basic', 'black');
+    color: color('basic', 'white');
     text-align: left;
-    box-shadow: 0 0 5px rgba($dark, 0.15);
+    box-shadow: 0 0 5px rgba(color('basic', 'black'), 0.15);
     *{
         -webkit-transition: all 0.35s;
         transition: all 0.35s;
@@ -45,7 +45,7 @@ figure{
             margin: 3px 0;
             opacity: 0;
             &.title2 {
-                color: $yellow;
+                color: color('yellow', 'base');;
             }
         }
     }

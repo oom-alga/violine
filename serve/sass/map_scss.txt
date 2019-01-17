@@ -1,0 +1,18 @@
+
+    Head
+        simple-bg
+        simple-left
+    project
+        simple
+        filter
+        rand-center
+        basic
+    work
+        simple
+        item-contents
+    skill
+        simple
+    testimonial
+        simple
+    about
+        basic

@@ -68,16 +68,6 @@ Font = Size
 
 /*---------------------------------------------------------------------------------------
 
-2 Color improvements
-
------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
-
-Color
-
------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
-
 3 Separator improvements
 
 -----------------------------------------------------------------------------------------*/
@@ -129,7 +119,7 @@ p {
   color: #ffd700; }
 
 h1 {
-  color: rgba(255, 255, 255, 0.6); }
+  color: #ffffff; }
 
 /*-- selection --*/
 ::-moz-selection {
@@ -143,7 +133,7 @@ h1 {
 /*-- Gradient Font --*/
 .gra {
   text-transform: uppercase;
-  background: linear-gradient(to right, #ffd700 0%, #E14E2F 100%);
+  background: linear-gradient(to right, #ffd700 0%, #e65100 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -527,6 +517,35 @@ body {
   #project.simple .title-top {
     margin-bottom: 30px; }
 
+#project.basic {
+  padding-top: 150px; }
+  #project.basic h2, #project.basic h3 {
+    color: #ffffff; }
+  #project.basic .image-article {
+    margin-top: 30px; }
+    #project.basic .image-article img {
+      width: 100%;
+      height: auto; }
+  #project.basic .article {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    #project.basic .article h1 {
+      margin-bottom: 30px; }
+    #project.basic .article ul.desc-up {
+      padding: 0; }
+      #project.basic .article ul.desc-up li {
+        display: inline-block;
+        margin: 0;
+        border-left: 1px solid #ffd700;
+        color: #ffffff;
+        padding-right: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 30px; }
+        #project.basic .article ul.desc-up li:first-child {
+          padding-left: 0px;
+          border-left: 0px; }
+
 #project.filter h1 {
   text-transform: uppercase; }
 
@@ -587,6 +606,21 @@ body {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+#work.item-contents {
+  padding-top: 150px; }
+  #work.item-contents .head-work {
+    padding-top: 50px;
+    padding-bottom: 100px; }
+  #work.item-contents .items-work .item {
+    padding-bottom: 50px; }
+    #work.item-contents .items-work .item h2 {
+      color: #ffd700; }
+
+/*---------------------------------------------------------------------------------------
+
+5 Skill
+
+-----------------------------------------------------------------------------------------*/
 #skill.simple img {
   width: 100%;
   height: auto; }
@@ -594,6 +628,11 @@ body {
 #skill.simple .title {
   height: 100%; }
 
+/*---------------------------------------------------------------------------------------
+
+5 Skill
+
+-----------------------------------------------------------------------------------------*/
 #testimonial.simple {
   background-image: url("../image/beauty-1.jpg");
   background-attachment: fixed;
@@ -616,45 +655,11 @@ body {
     width: auto;
     height: auto; }
 
-#work-item {
-  padding-top: 150px; }
-  #work-item .head-work {
-    padding-top: 50px;
-    padding-bottom: 100px; }
-  #work-item .items-work .item {
-    padding-bottom: 50px; }
-    #work-item .items-work .item h2 {
-      color: #ffd700; }
+/*---------------------------------------------------------------------------------------
 
-#project.basic {
-  padding-top: 150px; }
-  #project.basic h2, #project.basic h3 {
-    color: #ffffff; }
-  #project.basic .image-article {
-    margin-top: 30px; }
-    #project.basic .image-article img {
-      width: 100%;
-      height: auto; }
-  #project.basic .article {
-    padding-top: 50px;
-    padding-bottom: 50px; }
-    #project.basic .article h1 {
-      margin-bottom: 30px; }
-    #project.basic .article ul.desc-up {
-      padding: 0; }
-      #project.basic .article ul.desc-up li {
-        display: inline-block;
-        margin: 0;
-        border-left: 1px solid #ffd700;
-        color: #ffffff;
-        padding-right: 30px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 30px; }
-        #project.basic .article ul.desc-up li:first-child {
-          padding-left: 0px;
-          border-left: 0px; }
+5 Skill
 
+-----------------------------------------------------------------------------------------*/
 #about.basic .title {
   text-align: center;
   min-height: auto;
@@ -674,7 +679,9 @@ body {
 #about.basic .about-desc {
   padding-top: 50px;
   padding-bottom: 50px; }
-  #about.basic .about-desc h2, #about.basic .about-desc h3 {
+  #about.basic .about-desc h2 {
+    color: #ffd700; }
+  #about.basic .about-desc h3 {
     color: #ffffff; }
   #about.basic .about-desc .mage img {
     width: 100%;
