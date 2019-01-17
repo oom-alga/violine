@@ -10,12 +10,6 @@
         h1{
             color: $white;
         }
-        @media #{$small-and-down} {
-            background-color: color('red','accent-4');
-            h1{
-                color: green;
-            }
-        }
     }
     &.simple-left{
         position: relative;
@@ -34,9 +28,8 @@
             z-index: 9;
             top: 0;
             background-color: rgba($color: $black, $alpha: 0.5);
-            .title{
-                padding-top: 30%;
-                padding-bottom: 30%;
+            .me{
+                height: 100vh;
             }
         }
     }

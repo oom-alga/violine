@@ -41,9 +41,7 @@ Font = Weight
 .t-small{
     font-weight: 900;
 }
-figure figcaption .title1,
-#head.simple h1,
-#touch.simple h1{
+figure figcaption .title1{
     font-weight: 700;
 }
 figure figcaption .title2,
@@ -57,49 +55,6 @@ figure figcaption .title3{
 Font = Size
 
 -----------------------------------------------------------------------------------------*/
-
-p.small{
-    // font-size: 18px;
-}
-.all-item{
-    // font-size: 27px;
-}
-
-
-
-
-p{
-    // line-height: 30px;
-}
-.t-big{
-    // font-size: 100px;
-}
-.t-medium{
-    // font-size: 80px;
-}
-.overlay{
-    nav{
-        // font-size: 2rem;
-    }
-}
-figure{
-    figcaption{
-        h3{
-            // font-size: 44px;
-            &.title3 {
-                // font-size: 25px;
-            }
-        }
-    }
-}
-
-#work{
-    .content{
-        svg{
-            // font-size: 72px;
-        }
-    }
-}
 
 
 .display-5 {

@@ -44,9 +44,7 @@ Font = Weight
 .t-small {
   font-weight: 900; }
 
-figure figcaption .title1,
-#head.simple h1,
-#touch.simple h1 {
+figure figcaption .title1 {
   font-weight: 700; }
 
 figure figcaption .title2,
@@ -190,6 +188,14 @@ blockquote {
   padding-top: 100px;
   padding-bottom: 100px; }
 
+.m-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.s-wrap {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
 .button-white, .button-sec-color {
   border: none;
   color: white;
@@ -251,7 +257,8 @@ Button
       padding: 5px 15px;
       display: inline-block;
       border: 1px solid #ffd700;
-      color: #ffffff; }
+      color: #ffffff;
+      margin-bottom: 5px; }
 
 /*-- For All Item Button ( index ) --*/
 .all-item {
@@ -491,11 +498,6 @@ body {
   background-size: cover; }
   #head.simple-bg h1 {
     color: #ffffff; }
-  @media only screen and (max-width: 576px) {
-    #head.simple-bg {
-      background-color: #d50000; }
-      #head.simple-bg h1 {
-        color: green; } }
 
 #head.simple-left {
   position: relative; }
@@ -512,9 +514,8 @@ body {
     z-index: 9;
     top: 0;
     background-color: rgba(16, 16, 16, 0.5); }
-    #head.simple-left .wooshiap .title {
-      padding-top: 30%;
-      padding-bottom: 30%; }
+    #head.simple-left .wooshiap .me {
+      height: 100vh; }
 
 /*---------------------------------------------------------------------------------------
 
@@ -625,21 +626,23 @@ body {
     #work-item .items-work .item h2 {
       color: #ffd700; }
 
-#project-basic {
+#project.basic {
   padding-top: 150px; }
-  #project-basic .image-article {
+  #project.basic h2, #project.basic h3 {
+    color: #ffffff; }
+  #project.basic .image-article {
     margin-top: 30px; }
-    #project-basic .image-article img {
+    #project.basic .image-article img {
       width: 100%;
       height: auto; }
-  #project-basic .article {
+  #project.basic .article {
     padding-top: 50px;
     padding-bottom: 50px; }
-    #project-basic .article h1 {
+    #project.basic .article h1 {
       margin-bottom: 30px; }
-    #project-basic .article ul.desc-up {
+    #project.basic .article ul.desc-up {
       padding: 0; }
-      #project-basic .article ul.desc-up li {
+      #project.basic .article ul.desc-up li {
         display: inline-block;
         margin: 0;
         border-left: 1px solid #ffd700;
@@ -648,18 +651,19 @@ body {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 30px; }
-        #project-basic .article ul.desc-up li:first-child {
+        #project.basic .article ul.desc-up li:first-child {
           padding-left: 0px;
           border-left: 0px; }
 
-#about-basic .title {
+#about.basic .title {
   text-align: center;
   min-height: auto;
   background-image: url("../image/project1.jpg");
   background-position: initial;
   background-attachment: fixed;
-  background-size: 100%; }
-  #about-basic .title h1 {
+  object-fit: cover;
+  background-size: cover; }
+  #about.basic .title h1 {
     color: #ffffff;
     display: inline-block;
     padding: 30px;
@@ -667,18 +671,14 @@ body {
     margin-top: 150px;
     margin-bottom: 150px; }
 
-#about-basic .about-desc {
+#about.basic .about-desc {
   padding-top: 50px;
   padding-bottom: 50px; }
-  #about-basic .about-desc .one {
-    padding-top: 50px;
-    padding-bottom: 50px; }
-  #about-basic .about-desc .mage img {
+  #about.basic .about-desc h2, #about.basic .about-desc h3 {
+    color: #ffffff; }
+  #about.basic .about-desc .mage img {
     width: 100%;
     height: auto; }
-  #about-basic .about-desc .about-me {
-    padding-top: 50px;
-    padding-bottom: 50px; }
 
 #coba .wokkko {
   background-color: red;
@@ -687,25 +687,32 @@ body {
 #news-basic .article-news {
   position: relative; }
   #news-basic .article-news .title {
-    position: fixed;
-    height: 100%;
-    background-image: url("../image/SeparatorLogo.png");
-    background-position: left;
-    background-attachment: fixed;
-    background-size: contain;
-    background-repeat: no-repeat; }
+    height: 100vh; }
+  @media only screen and (min-width: 577px) {
+    #news-basic .article-news .title {
+      position: fixed;
+      height: 100%;
+      background-image: url("../image/SeparatorLogo.png");
+      background-position: left;
+      background-attachment: fixed;
+      background-size: contain;
+      background-repeat: no-repeat; } }
 
-#news-basic .content-news {
-  padding-top: 200px; }
-  #news-basic .content-news .item {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-    #news-basic .content-news .item p {
-      margin-top: 30px;
-      margin-bottom: 20px; }
-    #news-basic .content-news .item img {
-      width: 100%; }
+#news-basic .content-news .item {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  #news-basic .content-news .item h2 {
+    color: #ffffff; }
+  #news-basic .content-news .item p {
+    margin-top: 30px;
+    margin-bottom: 20px; }
+  #news-basic .content-news .item img {
+    width: 100%; }
+
+@media only screen and (min-width: 577px) {
+  #news-basic .content-news {
+    padding-top: 200px; } }
 
 #pricing .pricing-table ul {
   padding: 0; }

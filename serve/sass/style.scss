@@ -160,7 +160,6 @@ body{
     }
 }
 
-
 #work-item{
     padding: {
         top: 150px;
@@ -181,87 +180,86 @@ body{
     }
 }
 
-#project-basic{
-    padding: {
-        top: 150px;
-    }
-    .image-article{
-        margin-top: 30px;
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
-    .article{
+#project{
+    &.basic{
         padding: {
-            top: 50px;
-            bottom: 50px;
+            top: 150px;
         }
-        h1{
-            margin-bottom: 30px;
+        h2, h3{
+            color: $white;
         }
-        ul.desc-up{
-            padding: 0;
-            li{
-                display: inline-block;
-                margin: 0;
-                border-left: 1px solid $yellow;
-                color: $white;
-                padding: {
-                    right: 30px;
-                    top: 5px;
-                    bottom: 5px;
-                    left: 30px;
-                }
-                &:first-child{
-                    padding-left: 0px;
-                    border-left: 0px;
+        .image-article{
+            margin-top: 30px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .article{
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            }
+            h1{
+                margin-bottom: 30px;
+            }
+            ul.desc-up{
+                padding: 0;
+                li{
+                    display: inline-block;
+                    margin: 0;
+                    border-left: 1px solid $yellow;
+                    color: $white;
+                    padding: {
+                        right: 30px;
+                        top: 5px;
+                        bottom: 5px;
+                        left: 30px;
+                    }
+                    &:first-child{
+                        padding-left: 0px;
+                        border-left: 0px;
+                    }
                 }
             }
         }
     }
 }
 
-#about-basic{
-    .title{
-        text-align: center;
-        min-height: auto;
-        background-image: url('../image/project1.jpg');
-        background-position: initial;
-        background-attachment: fixed;
-        background-size: 100%;
-        h1{
-            color: $white;
-            display: inline-block;
-            padding: 30px;
-            border : 30px double rgba($white, 0.6);
-            margin: {
-                top: 150px;
-                bottom: 150px;
+#about{
+    &.basic{
+        .title{
+            text-align: center;
+            min-height: auto;
+            background-image: url('../image/project1.jpg');
+            background-position: initial;
+            background-attachment: fixed;
+            object-fit: cover;
+            background-size: cover;
+            h1{
+                color: $white;
+                display: inline-block;
+                padding: 30px;
+                border : 30px double rgba($white, 0.6);
+                margin: {
+                    top: 150px;
+                    bottom: 150px;
+                }
             }
         }
-    }
-    .about-desc{
-        padding: {
-            top: 50px;
-            bottom: 50px;
-        }
-        .one{
+        .about-desc{
             padding: {
                 top: 50px;
                 bottom: 50px;
             }
-        }
-        .mage{ 
-            img{
-                width: 100%;
-                height: auto;
+            h2, h3{
+                color: $white;
             }
-        }
-        .about-me{
-            padding: {
-                top: 50px;
-                bottom: 50px;
+            .mage{ 
+                img{
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -278,21 +276,28 @@ body{
     .article-news{
         position: relative;
         .title{
-            position: fixed;
-            height: 100%;
-            background-image: url('../image/SeparatorLogo.png');
-            background-position: left;
-            background-attachment: fixed;
-            background-size: contain;
-            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        @media #{$medium-and-up} {
+            .title{
+                position: fixed;
+                height: 100%;
+                background-image: url('../image/SeparatorLogo.png');
+                background-position: left;
+                background-attachment: fixed;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
         }
     }
     .content-news{
-        padding-top: 200px;
         .item{
             padding-bottom: 50px;
             margin-bottom: 50px;
             border-bottom: 1px solid rgba($white, 0.2);
+            h2{
+                color: $white;
+            }
             p{
                 margin: {
                     top: 30px;
@@ -302,6 +307,9 @@ body{
             img{
                 width: 100%;
             }
+        }
+        @media #{$medium-and-up} {
+            padding-top: 200px;
         }
     }
 }
