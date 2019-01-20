@@ -58,33 +58,6 @@ h1{
     }
 }
 
-
-.wave{
-    svg {
-        position: relative;
-        width: 100%;
-        bottom: -1px;
-        fill: color('basic', 'white');
-        path:nth-child(1) {
-            opacity: 0.15;
-        }
-        path:nth-child(2) {
-            opacity: 0.3;
-        }
-    }
-}
-
-/*-- blockquote Styling --*/
-blockquote{
-    padding: 30px 15px;
-    border-left: 5px solid color('grey', 'darken-3');
-    border-right: 5px solid color('grey', 'darken-3');
-    border-radius: 10px;
-    display: inline-block;
-    background-color: rgba($color: color('grey', 'darken-3'), $alpha: 0.2)
-}
-
-
 /*-- Warp div Styling --*/
 .wrap{
     padding: {

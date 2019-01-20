@@ -154,25 +154,6 @@ h1 {
     height: 250px;
     object-fit: cover; }
 
-.wave svg {
-  position: relative;
-  width: 100%;
-  bottom: -1px;
-  fill: #ffffff; }
-  .wave svg path:nth-child(1) {
-    opacity: 0.15; }
-  .wave svg path:nth-child(2) {
-    opacity: 0.3; }
-
-/*-- blockquote Styling --*/
-blockquote {
-  padding: 30px 15px;
-  border-left: 5px solid #101010;
-  border-right: 5px solid #101010;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: rgba(16, 16, 16, 0.2); }
-
 /*-- Warp div Styling --*/
 .wrap {
   padding-top: 100px;
@@ -599,7 +580,7 @@ body {
     margin: 20px 0 10px; }
 
 #work.simple .bg-mage {
-  background-image: url("../image/SeparatorLogo.png");
+  background-image: url("../image/SeparatorLogoFox.png");
   background-position: right;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -615,6 +596,88 @@ body {
     padding-bottom: 50px; }
     #work.item-contents .items-work .item h2 {
       color: #ffd700; }
+
+#work.animated-background .area {
+  background: #101010;
+  background-image: url("../image/background-elegant-woman.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  #work.animated-background .area .title {
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari 3-8 */
+    transform: rotate(-90deg);
+    width: 100vh;
+    padding: 20vh;
+    position: absolute;
+    right: 15%; }
+    #work.animated-background .area .title p {
+      color: #101010; }
+  #work.animated-background .area .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    #work.animated-background .area .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: #101010;
+      animation: animate 25s linear infinite;
+      box-shadow: 0px 0px 60px #ffd700;
+      bottom: -150px; }
+      #work.animated-background .area .circles li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s; }
+      #work.animated-background .area .circles li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s; }
+      #work.animated-background .area .circles li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s; }
+      #work.animated-background .area .circles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s; }
+      #work.animated-background .area .circles li:nth-child(5) {
+        left: 85%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s; }
+
+#work.animated-background .article .items .item {
+  position: relative; }
+  #work.animated-background .article .items .item img {
+    width: 100%;
+    height: 550px;
+    padding-left: 50px;
+    padding-right: 50px; }
+  #work.animated-background .article .items .item .content {
+    position: absolute;
+    bottom: 30%;
+    transition: all 0.5s; }
+  #work.animated-background .article .items .item:hover .content {
+    bottom: 25%; }
+  @media only screen and (min-width: 577px) {
+    #work.animated-background .article .items .item:nth-child(even) {
+      margin-top: 130px; } }
 
 /*---------------------------------------------------------------------------------------
 
@@ -738,81 +801,10 @@ body {
       width: 100%;
       height: 100vh; }
 
-#work-animated-background .area {
-  background: #101010;
-  width: 100%;
-  height: 100vh; }
-  #work-animated-background .area .circles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; }
-    #work-animated-background .area .circles li {
-      position: absolute;
-      display: block;
-      list-style: none;
-      width: 20px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      animation: animate 25s linear infinite;
-      bottom: -150px; }
-      #work-animated-background .area .circles li:nth-child(1) {
-        left: 25%;
-        width: 80px;
-        height: 80px;
-        animation-delay: 0s; }
-      #work-animated-background .area .circles li:nth-child(2) {
-        left: 10%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 2s;
-        animation-duration: 12s; }
-      #work-animated-background .area .circles li:nth-child(3) {
-        left: 70%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 4s; }
-      #work-animated-background .area .circles li:nth-child(4) {
-        left: 40%;
-        width: 60px;
-        height: 60px;
-        animation-delay: 0s;
-        animation-duration: 18s; }
-      #work-animated-background .area .circles li:nth-child(5) {
-        left: 85%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 0s; }
-  #work-animated-background .area .wave {
-    bottom: 0;
-    position: absolute;
-    width: 100%; }
-
-#work-animated-background .article {
-  position: relative;
-  background-color: #ffffff;
-  color: #101010; }
-  #work-animated-background .article p {
-    color: #101010; }
-  #work-animated-background .article .work-item {
-    margin-bottom: 30px; }
-    #work-animated-background .article .work-item figure {
-      margin: 0; }
-    #work-animated-background .article .work-item .image-item img {
-      width: 100%; }
-  #work-animated-background .article .wave {
-    bottom: 0;
-    position: absolute;
-    width: 100%; }
-    #work-animated-background .article .wave svg {
-      fill: #101010; }
-
 @keyframes animate {
   0% {
     transform: translateY(0) rotate(0deg);
-    opacity: 1;
+    opacity: 0.5;
     border-radius: 0; }
   100% {
     transform: translateY(-1000px) rotate(720deg);
