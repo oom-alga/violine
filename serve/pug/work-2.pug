@@ -25,8 +25,8 @@ block main
             .container.wrap
                 .row.work-item
                     .col-md-4.image-item
-                        figure
-                            img(src= "image/about1.jpg", alt="profile-sample7")
+                        figure.img-flex
+                            img(src= "image/girls/girl-4.jpg", alt="profile-sample7")
                             figcaption
                                 h3.title1 The
                                 h3.title2.gra Best
@@ -42,8 +42,8 @@ block main
                             - const item = {"1" : "Summer", "2" : "Awesome", "3":"Creative "};
                             for n, i in item
                                 .item
-                                    figure
-                                        img(src= "image/about"+ i +".jpg", alt="profile-sample7")
+                                    figure.img-flex
+                                        img(src= "image/girls/girl-"+ i +".jpg", alt="profile-sample7")
                                         figcaption
                                             h3.title1 The
                                             h3.title2.gra= n
@@ -55,8 +55,8 @@ block main
                             p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat temporibus ex perferendis perspiciatis incidunt et officiis eaque sint pariatur, odio, nisi sequi sed eligendi rerum cum quae excepturi nemo.
                 .row.work-item
                     .col-md-4.image-item
-                        figure
-                            img(src= "image/about1.jpg", alt="profile-sample7")
+                        figure.img-flex
+                            img(src= "image/girls/girl-5.jpg", alt="profile-sample7")
                             figcaption
                                 h3.title1 The
                                 h3.title2.gra Best

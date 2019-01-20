@@ -14,12 +14,12 @@ block main
                             .separator-big
                             p Here you could know more about us, know What we are thinking & doing.
                 .col-md-6.content-news
-                    - var titles = ["HOW TO STAND OUT WHILE FITTING IN.", "TOP DESIGN TRENDS YOU SHOULD FOLLOW.", "WHY MINIMALISM IS THE FUTURE."];
-                    each title in titles
+                    - const item = {"4" : "HOW TO STAND OUT WHILE FITTING IN.", "2" : "TOP DESIGN TRENDS YOU SHOULD FOLLOW.", "3":"WHY MINIMALISM IS THE FUTURE. "};
+                    for title, n in item
                         .item
                             h2.display-5= title
                             .separator-small
-                            img(src="image/project1.jpg", alt="")
+                            img(src="image/girls/girl-"+ n +".jpg", alt="")
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quae. Tempora voluptatibus quos ea? Quibusdam expedita nobis quia. Cumque dolorum quae, accusamus temporibus voluptas quaerat quos nostrum error quo rerum!
                             a(href="#")
                                 p.more READ MORE
